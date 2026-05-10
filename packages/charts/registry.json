@@ -1,7 +1,7 @@
 {
   "$schema": "https://a3tai.dev/mittsu/registry.schema.json",
   "name": "@a3tai/mittsu-charts",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "framework": "svelte5",
   "tokens": {
     "files": ["tokens/charts.css"]

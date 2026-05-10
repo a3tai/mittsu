@@ -1,6 +1,6 @@
 {
   "name": "@a3tai/mittsu",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "CLI to add @a3tai/mittsu components to your project shadcn-style.",
   "homepage": "https://mittsu.dev",
   "repository": {

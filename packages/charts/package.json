@@ -1,6 +1,6 @@
 {
   "name": "@a3tai/mittsu-charts",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Svelte 5 chart components for @a3tai/mittsu, rendered with SVG and powered by D3.",
   "homepage": "https://mittsu.dev",
   "repository": {
