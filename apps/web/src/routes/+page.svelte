@@ -423,12 +423,6 @@
     color: var(--uin-fg);
     text-wrap: balance;
   }
-  .hero-title-em {
-    color: color-mix(in srgb, var(--uin-fg) 55%, transparent);
-    font-style: italic;
-    font-weight: 400;
-    margin-left: 0.05em;
-  }
 
   .hero-sub {
     margin: 0 auto var(--uin-s-6);
