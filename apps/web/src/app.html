@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mittsu — native-ish UI primitives for Svelte 5</title>
+    <meta name="description" content="Source-first native-ish UI components and charts for Svelte 5." />
+    <script>
+      // Pre-paint: apply stored theme so the page never flashes the wrong palette.
+      (function () {
+        try {
+          var t = localStorage.getItem('uin-theme');
+          if (t === 'light' || t === 'dark') {
+            document.documentElement.setAttribute('data-theme', t);
+          }
+        } catch (e) {
+          /* localStorage may be blocked; fall through to system preference */
+        }
+      })();
+    </script>
+    %sveltekit.head%
+  </head>
+  <body>
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>

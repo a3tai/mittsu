@@ -1,0 +1,36 @@
+/* PinInput — see ./pin-input.svelte. */
+
+.uin-pin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.uin-pin-slot {
+  width: 36px;
+  height: 40px;
+  text-align: center;
+  font-family: var(--uin-font-mono);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--uin-fg);
+  background: var(--uin-mat-row);
+  border: 1px solid var(--uin-line);
+  border-radius: var(--uin-r-sm);
+  caret-color: var(--uin-accent);
+  transition:
+    border-color var(--uin-dur-1) var(--uin-ease-standard),
+    box-shadow var(--uin-dur-1) var(--uin-ease-standard);
+}
+
+.uin-pin-slot:focus-visible,
+.uin-pin-slot:focus {
+  outline: none;
+  border-color: var(--uin-accent);
+  box-shadow: var(--uin-focus-ring);
+}
+
+.uin-pin-disabled .uin-pin-slot {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

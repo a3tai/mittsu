@@ -1,0 +1,149 @@
+/*
+ * ChartFrame - figure shell, header, metrics, legend, footer.
+ *
+ * Depends on lib/charts.shared.css for the chart-wide primitives
+ * (.uin-chart-shell, .uin-chart-swatch, etc.).
+ */
+
+.uin-chart-frame {
+  margin: 0;
+  padding: var(--uin-s-4, 16px);
+  border: 1px solid var(--uin-line, rgba(0, 0, 0, 0.10));
+  border-radius: var(--uin-r-lg, 12px);
+  background:
+    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--uin-accent, #007aff) 5%, transparent) 0, transparent 46%),
+    linear-gradient(
+      180deg,
+      var(--uin-chart-surface-raised, var(--uin-mat-panel, color-mix(in srgb, #ffffff 92%, transparent))),
+      var(--uin-chart-surface, var(--uin-mat-row, color-mix(in srgb, #ffffff 50%, transparent)))
+    );
+  color: var(--uin-chart-text);
+  font-family: var(--uin-font-ui, ui-sans-serif, system-ui, sans-serif);
+  box-shadow: var(--uin-chart-shadow, none);
+}
+
+.uin-chart-frame-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--uin-s-3, 12px);
+  margin-bottom: var(--uin-s-3, 12px);
+}
+
+.uin-chart-frame-copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.uin-chart-frame-meta {
+  display: grid;
+  justify-items: end;
+  gap: var(--uin-s-2, 8px);
+  min-width: max-content;
+}
+
+.uin-chart-frame-title {
+  font-family: var(--uin-font-display, ui-serif, Georgia, serif);
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--uin-chart-text);
+}
+
+.uin-chart-frame-desc {
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: var(--uin-chart-muted);
+}
+
+.uin-chart-metrics {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: var(--uin-s-3, 12px);
+}
+
+.uin-chart-metric {
+  display: grid;
+  gap: 2px;
+  min-width: 68px;
+  padding: 5px 7px;
+  border: 1px solid color-mix(in srgb, var(--uin-chart-grid) 78%, transparent);
+  border-radius: var(--uin-r-sm, 4px);
+  background: color-mix(
+    in srgb,
+    var(--uin-chart-surface-raised, var(--uin-mat-panel, color-mix(in srgb, #ffffff 92%, transparent))) 64%,
+    transparent
+  );
+}
+
+.uin-chart-metric-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--uin-chart-label, var(--uin-chart-muted));
+  font-size: 10.5px;
+  line-height: 1.2;
+}
+
+.uin-chart-metric-value {
+  color: var(--uin-chart-value, var(--uin-chart-text));
+  font-family: var(--uin-font-display, ui-serif, Georgia, serif);
+  font-size: 18px;
+  line-height: 1.1;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.uin-chart-metric-desc {
+  color: var(--uin-chart-muted);
+  font-size: 10.5px;
+  line-height: 1.2;
+}
+
+.uin-chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  color: var(--uin-chart-muted);
+  font-size: 11px;
+  line-height: 1;
+}
+
+.uin-chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.uin-chart-frame-foot {
+  margin-top: var(--uin-s-2, 8px);
+  color: var(--uin-chart-muted);
+  font-size: 11.5px;
+}
+
+@media (max-width: 620px) {
+  .uin-chart-frame-head {
+    flex-direction: column;
+  }
+
+  .uin-chart-frame-meta {
+    justify-items: start;
+    min-width: 0;
+  }
+
+  .uin-chart-metrics {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .uin-chart-legend {
+    justify-content: flex-start;
+  }
+}

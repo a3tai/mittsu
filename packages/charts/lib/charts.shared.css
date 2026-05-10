@@ -1,0 +1,70 @@
+/*
+ * @a3tai/mittsu-charts - shared chart primitives.
+ *
+ * Visual styles common to every chart: the SVG host, gridlines, axis lines,
+ * tick text, the visually-hidden data table, and the swatch dot used by
+ * legends and tooltips. Import this once per app (via the package's
+ * registry.json `lib.files`) before any chart component CSS.
+ */
+
+.uin-chart-shell {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.uin-chart-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  outline: none;
+  border-radius: var(--uin-r-sm, 4px);
+  color: var(--uin-chart-text);
+}
+
+.uin-chart-svg:focus-visible {
+  box-shadow: var(--uin-chart-focus-ring, 0 0 0 3px color-mix(in srgb, currentColor 40%, transparent));
+}
+
+.uin-chart-grid-line {
+  stroke: var(--uin-chart-grid);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  shape-rendering: crispEdges;
+}
+
+.uin-chart-axis-line {
+  stroke: var(--uin-chart-baseline, color-mix(in srgb, var(--uin-chart-grid) 80%, transparent));
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  shape-rendering: crispEdges;
+}
+
+.uin-chart-tick {
+  fill: var(--uin-chart-label, var(--uin-chart-axis));
+  font-family: var(--uin-font-ui, ui-sans-serif, system-ui, sans-serif);
+  font-size: 10px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.005em;
+}
+
+.uin-chart-swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--uin-chart-text) 16%, transparent);
+}
+
+.uin-chart-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

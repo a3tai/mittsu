@@ -1,0 +1,42 @@
+/* LineChart - see ./line-chart.svelte. */
+
+.uin-line-chart {
+  min-height: 180px;
+}
+
+.uin-line-path {
+  fill: none;
+  stroke-width: var(--uin-chart-line-width, 2.25);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-line-area {
+  opacity: var(--uin-chart-area-opacity, 0.16);
+}
+
+.uin-line-point {
+  stroke: var(--uin-chart-point-stroke, var(--uin-chart-row));
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-line-label {
+  fill: var(--uin-chart-muted);
+  font-family: var(--uin-font-ui, ui-sans-serif, system-ui, sans-serif);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
+.uin-line-active-rule {
+  stroke: var(--uin-chart-crosshair, var(--uin-chart-axis));
+  stroke-dasharray: 3 4;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-line-hit {
+  fill: transparent;
+}

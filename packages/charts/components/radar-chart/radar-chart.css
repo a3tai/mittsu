@@ -1,0 +1,51 @@
+/* RadarChart - see ./radar-chart.svelte. */
+
+.uin-radar-chart {
+  min-height: 220px;
+}
+
+.uin-radar-grid {
+  fill: none;
+  stroke: var(--uin-chart-grid);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-radar-grid-fill {
+  fill: color-mix(in srgb, var(--uin-chart-grid) 22%, transparent);
+}
+
+.uin-radar-axis-line {
+  stroke: color-mix(in srgb, var(--uin-chart-grid) 78%, transparent);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-radar-axis-label {
+  fill: var(--uin-chart-label, var(--uin-chart-axis));
+  font-family: var(--uin-font-ui, ui-sans-serif, system-ui, sans-serif);
+  font-size: 10px;
+}
+
+.uin-radar-area {
+  opacity: calc(var(--uin-chart-area-opacity, 0.16) + 0.02);
+  stroke: none;
+}
+
+.uin-radar-line {
+  fill: none;
+  stroke-width: var(--uin-chart-line-width, 2.25);
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-radar-dot {
+  stroke: var(--uin-chart-point-stroke, var(--uin-chart-row));
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-radar-hit {
+  fill: transparent;
+  cursor: default;
+}

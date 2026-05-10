@@ -1,0 +1,35 @@
+/* AreaChart - see ./area-chart.svelte. */
+
+.uin-area-chart {
+  min-height: 180px;
+}
+
+.uin-area-fill {
+  opacity: calc(var(--uin-chart-area-opacity, 0.16) + 0.06);
+  stroke: none;
+}
+
+.uin-area-line {
+  fill: none;
+  stroke-width: var(--uin-chart-line-width, 2.25);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-area-point {
+  stroke: var(--uin-chart-point-stroke, var(--uin-chart-row));
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-area-active-rule {
+  stroke: var(--uin-chart-crosshair, var(--uin-chart-axis));
+  stroke-dasharray: 3 4;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-area-hit {
+  fill: transparent;
+}

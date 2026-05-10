@@ -1,0 +1,87 @@
+/*
+ * ChartTooltip - chart tooltip content.
+ *
+ * Charts position the tooltip via inline `style="left: ...; top: ..."`;
+ * everything below is layout/typography only.
+ */
+
+.uin-chart-tooltip {
+  position: absolute;
+  z-index: 2;
+  min-width: 132px;
+  max-width: 220px;
+  padding: 8px 10px;
+  border: 1px solid var(--uin-line, rgba(0, 0, 0, 0.10));
+  border-radius: var(--uin-r-md, 8px);
+  background: var(--uin-chart-panel);
+  color: var(--uin-chart-text);
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--uin-chart-text) 14%, transparent);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 8px));
+}
+
+.uin-chart-tooltip-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--uin-chart-muted);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.uin-chart-tooltip-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+
+.uin-chart-tooltip-row + .uin-chart-tooltip-row {
+  margin-top: 2px;
+}
+
+.uin-chart-tooltip-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--uin-chart-muted);
+}
+
+.uin-chart-tooltip-value {
+  color: var(--uin-chart-text);
+  font-family: var(--uin-font-mono, ui-monospace, monospace);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.uin-chart-tooltip-indicator-line {
+  width: 2px;
+  height: 16px;
+  border-radius: 999px;
+  flex: 0 0 auto;
+}
+
+.uin-chart-tooltip-icon {
+  width: 13px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--uin-chart-muted);
+  font-size: 11px;
+  line-height: 1;
+}
+
+.uin-chart-tooltip-unit {
+  margin-left: 3px;
+  color: var(--uin-chart-muted);
+  font-weight: 500;
+}
+
+.uin-chart-tooltip-total {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--uin-chart-grid);
+}

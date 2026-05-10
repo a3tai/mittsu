@@ -1,0 +1,44 @@
+/* BarChart - see ./bar-chart.svelte. */
+
+.uin-bar-chart {
+  min-height: 180px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .uin-bar-mark {
+    transition:
+      opacity var(--uin-dur-1, 120ms) var(--uin-ease-standard, ease),
+      filter var(--uin-dur-1, 120ms) var(--uin-ease-standard, ease);
+  }
+}
+
+.uin-bar-mark:hover {
+  filter: brightness(1.06);
+}
+
+.uin-bar-mark-active {
+  filter: brightness(1.08);
+  stroke: color-mix(in srgb, var(--uin-chart-text) 34%, transparent);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.uin-bar-mark-negative {
+  fill: var(--uin-chart-negative);
+}
+
+.uin-bar-mark-negative {
+  opacity: 0.9;
+}
+
+.uin-bar-chart:has(.uin-bar-mark:hover) .uin-bar-mark:not(:hover) {
+  opacity: 0.62;
+}
+
+.uin-bar-label {
+  fill: var(--uin-chart-muted);
+  font-family: var(--uin-font-ui, ui-sans-serif, system-ui, sans-serif);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}

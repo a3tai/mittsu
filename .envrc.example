@@ -1,0 +1,31 @@
+# ── Local env via direnv + 1Password ──────────────────────────
+#
+# Setup once:
+#   1. brew install direnv 1password-cli
+#   2. Add `eval "$(direnv hook zsh)"` (or bash/fish) to your shell rc
+#   3. cp .envrc.example .envrc
+#   4. Edit op:// paths below to match your 1Password vault layout
+#   5. eval "$(op signin)"     # if not already signed in
+#   6. cd into this dir and run: direnv allow
+#
+# direnv will then load these vars into your shell whenever you cd in,
+# resolving op:// references against your 1Password account at load time.
+# Nothing is ever written to disk in plain text.
+#
+# CI does not use this file — the GitHub Action reads the same values
+# from repo secrets (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID).
+
+# Bail quietly if 1Password CLI isn't signed in. (Local dev still works
+# for everything that doesn't touch deploy.)
+if ! op account get >/dev/null 2>&1; then
+  echo "[envrc] op CLI not signed in — skipping Cloudflare creds. Run: eval \"\$(op signin)\"" >&2
+  return 0 2>/dev/null || exit 0
+fi
+
+# Cloudflare deploy creds. Adjust the op:// paths to match where you
+# stored these in 1Password. The paths below assume:
+#   - Vault: "Private"
+#   - Item: "Cloudflare — Mittsu"
+#   - Fields: "api-token" and "account-id"
+export CLOUDFLARE_API_TOKEN="$(op read 'op://Private/Cloudflare — Mittsu/api-token')"
+export CLOUDFLARE_ACCOUNT_ID="$(op read 'op://Private/Cloudflare — Mittsu/account-id')"

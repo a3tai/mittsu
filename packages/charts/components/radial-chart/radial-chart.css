@@ -1,0 +1,50 @@
+/* RadialChart - see ./radial-chart.svelte. */
+
+.uin-radial-chart {
+  min-height: 200px;
+}
+
+.uin-radial-track {
+  fill: color-mix(in srgb, var(--uin-chart-grid) 52%, transparent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .uin-radial-arc {
+    transition:
+      opacity var(--uin-dur-1, 120ms) var(--uin-ease-standard, ease),
+      filter var(--uin-dur-1, 120ms) var(--uin-ease-standard, ease);
+  }
+}
+
+.uin-radial-arc:hover {
+  filter: brightness(1.06);
+}
+
+.uin-radial-chart:has(.uin-radial-arc:hover) .uin-radial-arc:not(:hover) {
+  opacity: 0.62;
+}
+
+.uin-radial-label {
+  fill: color-mix(in srgb, var(--uin-chart-text) 86%, transparent);
+  font-family: var(--uin-font-ui, ui-sans-serif, system-ui, sans-serif);
+  font-size: 9.5px;
+  font-weight: 650;
+  pointer-events: none;
+}
+
+.uin-radial-total {
+  fill: var(--uin-chart-value, var(--uin-chart-text));
+  font-family: var(--uin-font-display, ui-serif, Georgia, serif);
+  font-size: 24px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.uin-radial-center-label {
+  fill: var(--uin-chart-muted);
+  font-family: var(--uin-font-ui, ui-sans-serif, system-ui, sans-serif);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

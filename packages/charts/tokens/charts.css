@@ -1,0 +1,87 @@
+/*
+ * @a3tai/mittsu-charts - chart tokens
+ *
+ * Import this after the core mittsu tokens. Every value has a fallback so
+ * charts can still render in isolation, but the intended path is to inherit
+ * --uin-* from the core package.
+ */
+
+:root {
+  /* Categorical palette. Ordered for broad separation before subtle hues. */
+  --uin-chart-1: #007aff;
+  --uin-chart-2: #34c759;
+  --uin-chart-3: #ff9500;
+  --uin-chart-4: #af52de;
+  --uin-chart-5: #ff2d55;
+  --uin-chart-6: #5ac8fa;
+  --uin-chart-7: #5856d6;
+  --uin-chart-8: #8e8e93;
+
+  /* Semantic palette for security, health, and operations charts. */
+  --uin-chart-info: var(--uin-chart-1);
+  --uin-chart-success: var(--uin-success, #34c759);
+  --uin-chart-warning: var(--uin-warn, #ffcc00);
+  --uin-chart-danger: var(--uin-danger, #ff453a);
+  --uin-chart-critical: #d70015;
+  --uin-chart-neutral: var(--uin-chart-8);
+  --uin-chart-negative: #ff453a;
+
+  /* Chart chrome. These keep SVG marks readable across app surfaces. */
+  --uin-chart-surface: var(--uin-mat-row, color-mix(in srgb, #ffffff 50%, transparent));
+  --uin-chart-surface-raised: var(--uin-mat-panel, color-mix(in srgb, #ffffff 92%, transparent));
+  --uin-chart-panel: var(--uin-mat-panel, color-mix(in srgb, #ffffff 92%, transparent));
+  --uin-chart-row: var(--uin-mat-row, color-mix(in srgb, #ffffff 50%, transparent));
+  --uin-chart-grid: var(--uin-line, rgba(0, 0, 0, 0.10));
+  --uin-chart-grid-strong: var(--uin-line-strong, rgba(0, 0, 0, 0.18));
+  --uin-chart-axis: var(--uin-fg-dim, rgba(0, 0, 0, 0.42));
+  --uin-chart-baseline: color-mix(in srgb, var(--uin-chart-axis) 72%, transparent);
+  --uin-chart-crosshair: color-mix(in srgb, var(--uin-chart-axis) 72%, transparent);
+  --uin-chart-text: var(--uin-fg, rgba(0, 0, 0, 0.88));
+  --uin-chart-muted: var(--uin-fg-mute, rgba(0, 0, 0, 0.62));
+  --uin-chart-label: var(--uin-fg-dim, rgba(0, 0, 0, 0.42));
+  --uin-chart-value: var(--uin-fg, rgba(0, 0, 0, 0.88));
+  --uin-chart-area-opacity: 0.16;
+  --uin-chart-line-width: 2.25;
+  --uin-chart-point-stroke: var(--uin-bg-panel, #ffffff);
+  --uin-chart-shadow: 0 18px 50px color-mix(in srgb, var(--uin-fg, #000000) 10%, transparent);
+  --uin-chart-focus-ring: var(--uin-focus-ring, 0 0 0 3px color-mix(in srgb, #007aff 40%, transparent));
+}
+
+:root[data-theme="dark"],
+[data-theme="dark"] {
+  --uin-chart-1: #0a84ff;
+  --uin-chart-2: #30d158;
+  --uin-chart-3: #ff9f0a;
+  --uin-chart-4: #bf5af2;
+  --uin-chart-5: #ff375f;
+  --uin-chart-6: #64d2ff;
+  --uin-chart-7: #5e5ce6;
+  --uin-chart-8: #98989d;
+  --uin-chart-info: var(--uin-chart-1);
+  --uin-chart-success: var(--uin-success, #30d158);
+  --uin-chart-warning: var(--uin-warn, #ffd60a);
+  --uin-chart-danger: var(--uin-danger, #ff453a);
+  --uin-chart-critical: #ff6961;
+  --uin-chart-neutral: var(--uin-chart-8);
+  --uin-chart-negative: #ff453a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --uin-chart-1: #0a84ff;
+    --uin-chart-2: #30d158;
+    --uin-chart-3: #ff9f0a;
+    --uin-chart-4: #bf5af2;
+    --uin-chart-5: #ff375f;
+    --uin-chart-6: #64d2ff;
+    --uin-chart-7: #5e5ce6;
+    --uin-chart-8: #98989d;
+    --uin-chart-info: var(--uin-chart-1);
+    --uin-chart-success: var(--uin-success, #30d158);
+    --uin-chart-warning: var(--uin-warn, #ffd60a);
+    --uin-chart-danger: var(--uin-danger, #ff453a);
+    --uin-chart-critical: #ff6961;
+    --uin-chart-neutral: var(--uin-chart-8);
+    --uin-chart-negative: #ff453a;
+  }
+}

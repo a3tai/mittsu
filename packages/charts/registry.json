@@ -1,0 +1,98 @@
+{
+  "$schema": "https://a3tai.dev/mittsu/registry.schema.json",
+  "name": "@a3tai/mittsu-charts",
+  "version": "0.0.1",
+  "framework": "svelte5",
+  "tokens": {
+    "files": ["tokens/charts.css"]
+  },
+  "lib": {
+    "files": [
+      "lib/cn.ts",
+      "lib/types.ts",
+      "lib/utils.ts",
+      "lib/index.ts",
+      "lib/charts.shared.css"
+    ]
+  },
+  "components": {
+    "chart-frame": {
+      "name": "chart-frame",
+      "description": "Shared figure shell for chart title, description, legend, and chart content.",
+      "files": [
+        "components/chart-frame/chart-frame.svelte",
+        "components/chart-frame/chart-frame.css"
+      ],
+      "dependencies": ["lib/cn", "lib/types"]
+    },
+    "chart-tooltip": {
+      "name": "chart-tooltip",
+      "description": "Shared chart tooltip content with label, marker, unit, icon, and total row variants.",
+      "files": [
+        "components/chart-tooltip/chart-tooltip.svelte",
+        "components/chart-tooltip/chart-tooltip.css"
+      ],
+      "dependencies": ["lib/cn", "lib/types"]
+    },
+    "area-chart": {
+      "name": "area-chart",
+      "description": "Responsive SVG area chart with stacked and expanded modes powered by D3.",
+      "files": [
+        "components/area-chart/area-chart.svelte",
+        "components/area-chart/area-chart.css"
+      ],
+      "dependencies": ["lib/cn", "lib/types", "lib/utils", "chart-frame", "chart-tooltip"],
+      "externalDependencies": ["d3-array", "d3-scale", "d3-shape"]
+    },
+    "line-chart": {
+      "name": "line-chart",
+      "description": "Responsive SVG line and area chart powered by D3 scales and paths.",
+      "files": [
+        "components/line-chart/line-chart.svelte",
+        "components/line-chart/line-chart.css"
+      ],
+      "dependencies": ["lib/cn", "lib/types", "lib/utils", "chart-frame", "chart-tooltip"],
+      "externalDependencies": ["d3-array", "d3-scale", "d3-shape"]
+    },
+    "bar-chart": {
+      "name": "bar-chart",
+      "description": "Grouped or stacked categorical bar chart powered by D3 scales and stack layout.",
+      "files": [
+        "components/bar-chart/bar-chart.svelte",
+        "components/bar-chart/bar-chart.css"
+      ],
+      "dependencies": ["lib/cn", "lib/types", "lib/utils", "chart-frame", "chart-tooltip"],
+      "externalDependencies": ["d3-array", "d3-scale", "d3-shape"]
+    },
+    "donut-chart": {
+      "name": "donut-chart",
+      "description": "Donut chart powered by D3 pie and arc generators.",
+      "files": [
+        "components/donut-chart/donut-chart.svelte",
+        "components/donut-chart/donut-chart.css"
+      ],
+      "dependencies": ["lib/cn", "lib/types", "lib/utils", "chart-frame", "chart-tooltip"],
+      "externalDependencies": ["d3-shape"]
+    },
+    "radar-chart": {
+      "name": "radar-chart",
+      "description": "Radar chart with polygon or circular grid styles powered by D3 scales.",
+      "files": [
+        "components/radar-chart/radar-chart.svelte",
+        "components/radar-chart/radar-chart.css"
+      ],
+      "dependencies": ["lib/cn", "lib/types", "lib/utils", "chart-frame", "chart-tooltip"],
+      "externalDependencies": ["d3-array", "d3-scale"]
+    },
+    "radial-chart": {
+      "name": "radial-chart",
+      "description": "Radial progress rings and stacked gauge arcs powered by D3 arc generation.",
+      "files": [
+        "components/radial-chart/radial-chart.svelte",
+        "components/radial-chart/radial-chart.css"
+      ],
+      "dependencies": ["lib/cn", "lib/types", "lib/utils", "chart-frame", "chart-tooltip"],
+      "externalDependencies": ["d3-shape"]
+    }
+  }
+}

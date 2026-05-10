@@ -1,0 +1,771 @@
+{
+  "$schema": "https://a3tai.dev/mittsu/registry.schema.json",
+  "name": "@a3tai/mittsu-svelte5",
+  "version": "0.0.1",
+  "framework": "svelte5",
+  "tokens": {
+    "files": ["tokens/tokens.css"]
+  },
+  "lib": {
+    "files": ["lib/cn.ts"]
+  },
+  "components": {
+    "button": {
+      "name": "button",
+      "description": "Primary action element with primary / ghost / outline variants.",
+      "files": [
+        "components/button/button.svelte",
+        "components/button/button.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "spinner": {
+      "name": "spinner",
+      "description": "Indeterminate progress ring (sm/md/lg).",
+      "files": [
+        "components/spinner/spinner.svelte",
+        "components/spinner/spinner.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "badge": {
+      "name": "badge",
+      "description": "Pill-shaped status / count label.",
+      "files": [
+        "components/badge/badge.svelte",
+        "components/badge/badge.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "lamp": {
+      "name": "lamp",
+      "description": "Colored status dot with halo (idle/running/warn/fail).",
+      "files": [
+        "components/lamp/lamp.svelte",
+        "components/lamp/lamp.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "kbd": {
+      "name": "kbd",
+      "description": "Keyboard shortcut hint, styled like a key cap.",
+      "files": [
+        "components/kbd/kbd.svelte",
+        "components/kbd/kbd.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "card": {
+      "name": "card",
+      "description": "Generic surface (flat / tinted variants).",
+      "files": [
+        "components/card/card.svelte",
+        "components/card/card.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "progress-bar": {
+      "name": "progress-bar",
+      "description": "Determinate or indeterminate progress bar.",
+      "files": [
+        "components/progress-bar/progress-bar.svelte",
+        "components/progress-bar/progress-bar.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "input": {
+      "name": "input",
+      "description": "Base text input primitive with leading/trailing slots.",
+      "files": [
+        "components/input/input.svelte",
+        "components/input/input.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "search-input": {
+      "name": "search-input",
+      "description": "Pill search field with magnifier + ⌘K hint + clear button.",
+      "files": [
+        "components/search-input/search-input.svelte",
+        "components/search-input/search-input.css"
+      ],
+      "dependencies": ["lib/cn", "input", "kbd"]
+    },
+    "textarea": {
+      "name": "textarea",
+      "description": "Multi-line text input with optional auto-resize.",
+      "files": [
+        "components/textarea/textarea.svelte",
+        "components/textarea/textarea.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "label": {
+      "name": "label",
+      "description": "Caption / eyebrow for form fields.",
+      "files": [
+        "components/label/label.svelte",
+        "components/label/label.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "nav-item": {
+      "name": "nav-item",
+      "description": "Sidebar navigation row with dot / label / aside slots.",
+      "files": [
+        "components/nav-item/nav-item.svelte",
+        "components/nav-item/nav-item.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "segmented-control": {
+      "name": "segmented-control",
+      "description": "Connected radio buttons sharing one rounded chassis.",
+      "files": [
+        "components/segmented-control/segmented-control.svelte",
+        "components/segmented-control/segmented-control.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "tabs": {
+      "name": "tabs",
+      "description": "Pill-style tab strip (vertical / horizontal) with optional counts.",
+      "files": [
+        "components/tabs/tabs.svelte",
+        "components/tabs/tabs.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "chip": {
+      "name": "chip",
+      "description": "Toggleable filter pill with optional count.",
+      "files": [
+        "components/chip/chip.svelte",
+        "components/chip/chip.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "stat": {
+      "name": "stat",
+      "description": "Single label + display-font value pair.",
+      "files": [
+        "components/stat/stat.svelte",
+        "components/stat/stat.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "status-row": {
+      "name": "status-row",
+      "description": "Compact summary card for an in-progress operation.",
+      "files": [
+        "components/status-row/status-row.svelte",
+        "components/status-row/status-row.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "separator": {
+      "name": "separator",
+      "description": "Horizontal or vertical rule, solid or dashed.",
+      "files": [
+        "components/separator/separator.svelte",
+        "components/separator/separator.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "stack": {
+      "name": "stack",
+      "description": "Vertical flex column with token-driven gap, align, and justify.",
+      "files": [
+        "components/stack/stack.svelte",
+        "components/stack/stack.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "container": {
+      "name": "container",
+      "description": "Max-width content well with auto margins (sm / md / lg / xl / full).",
+      "files": [
+        "components/container/container.svelte",
+        "components/container/container.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "spacer": {
+      "name": "spacer",
+      "description": "Flex helper that fills remaining space between siblings.",
+      "files": [
+        "components/spacer/spacer.svelte",
+        "components/spacer/spacer.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "center": {
+      "name": "center",
+      "description": "Flex container that centers its children on both axes.",
+      "files": [
+        "components/center/center.svelte",
+        "components/center/center.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "box": {
+      "name": "box",
+      "description": "Generic div wrapper with token-driven padding and radius shortcuts.",
+      "files": [
+        "components/box/box.svelte",
+        "components/box/box.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "section": {
+      "name": "section",
+      "description": "Semantic <section> with optional display-font title and muted subtitle.",
+      "files": [
+        "components/section/section.svelte",
+        "components/section/section.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "aspect-ratio": {
+      "name": "aspect-ratio",
+      "description": "Locks a child block to a fixed width:height ratio.",
+      "files": [
+        "components/aspect-ratio/aspect-ratio.svelte",
+        "components/aspect-ratio/aspect-ratio.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "skeleton": {
+      "name": "skeleton",
+      "description": "Pulsing placeholder block for loading states (rect / text / circle).",
+      "files": [
+        "components/skeleton/skeleton.svelte",
+        "components/skeleton/skeleton.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "hstack": {
+      "name": "hstack",
+      "description": "Horizontal flex row with token-driven gap, align, justify, and optional wrap.",
+      "files": [
+        "components/hstack/hstack.svelte",
+        "components/hstack/hstack.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "vstack": {
+      "name": "vstack",
+      "description": "Vertical flex column. Naming-symmetric twin of HStack.",
+      "files": [
+        "components/vstack/vstack.svelte",
+        "components/vstack/vstack.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "flex": {
+      "name": "flex",
+      "description": "Generic flex container with explicit direction, wrap, gap, align, and justify.",
+      "files": [
+        "components/flex/flex.svelte",
+        "components/flex/flex.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "field": {
+      "name": "field",
+      "description": "Labeled form-field wrapper with auto-id, description, error, and ARIA wiring.",
+      "files": [
+        "components/field/field.svelte",
+        "components/field/field.css"
+      ],
+      "dependencies": ["lib/cn", "label"]
+    },
+    "empty": {
+      "name": "empty",
+      "description": "Empty-state placeholder with optional icon, title, description, and action.",
+      "files": [
+        "components/empty/empty.svelte",
+        "components/empty/empty.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "avatar": {
+      "name": "avatar",
+      "description": "Circular user image with initials fallback (xs / sm / md / lg / xl).",
+      "files": [
+        "components/avatar/avatar.svelte",
+        "components/avatar/avatar.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "scroll-area": {
+      "name": "scroll-area",
+      "description": "Overflow container with native-feel styled scrollbars (vertical / horizontal / both).",
+      "files": [
+        "components/scroll-area/scroll-area.svelte",
+        "components/scroll-area/scroll-area.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "typography": {
+      "name": "typography",
+      "description": "Preset typographic styles (display / h1-h4 / lead / body / caption / eyebrow) with tone overrides.",
+      "files": [
+        "components/typography/typography.svelte",
+        "components/typography/typography.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "notch": {
+      "name": "notch",
+      "description": "Frosted-material section header with leading / trailing slots (macOS-flavored).",
+      "files": [
+        "components/notch/notch.svelte",
+        "components/notch/notch.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "toggle": {
+      "name": "toggle",
+      "description": "Pressable button with persistent on/off state (default / outline variants).",
+      "files": [
+        "components/toggle/toggle.svelte",
+        "components/toggle/toggle.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "toggle-group": {
+      "name": "toggle-group",
+      "description": "Set of related Toggles with single or multiple selection mode.",
+      "files": [
+        "components/toggle-group/toggle-group.svelte",
+        "components/toggle-group/toggle-group.css"
+      ],
+      "dependencies": ["lib/cn", "toggle"]
+    },
+    "switch": {
+      "name": "switch",
+      "description": "Sliding on/off control (the macOS-Settings shape) with sm / md sizes.",
+      "files": [
+        "components/switch/switch.svelte",
+        "components/switch/switch.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "checkbox": {
+      "name": "checkbox",
+      "description": "Boolean form control with optional label and indeterminate state.",
+      "files": [
+        "components/checkbox/checkbox.svelte",
+        "components/checkbox/checkbox.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "radio-group": {
+      "name": "radio-group",
+      "description": "Single-select group of radio options (vertical / horizontal).",
+      "files": [
+        "components/radio-group/radio-group.svelte",
+        "components/radio-group/radio-group.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "slider": {
+      "name": "slider",
+      "description": "Single-thumb range input with token-driven track and thumb chrome.",
+      "files": [
+        "components/slider/slider.svelte",
+        "components/slider/slider.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "stepper": {
+      "name": "stepper",
+      "description": "▲▼ connected button pair (macOS-flavored increment / decrement).",
+      "files": [
+        "components/stepper/stepper.svelte",
+        "components/stepper/stepper.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "number-input": {
+      "name": "number-input",
+      "description": "Numeric text field with ▲▼ Stepper, min / max / step support.",
+      "files": [
+        "components/number-input/number-input.svelte",
+        "components/number-input/number-input.css"
+      ],
+      "dependencies": ["lib/cn", "input", "stepper"]
+    },
+    "pin-input": {
+      "name": "pin-input",
+      "description": "Fixed-length OTP / verification code field with paste, auto-advance, and masking.",
+      "files": [
+        "components/pin-input/pin-input.svelte",
+        "components/pin-input/pin-input.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "password-input": {
+      "name": "password-input",
+      "description": "Input with a show / hide toggle eye icon in the trailing slot.",
+      "files": [
+        "components/password-input/password-input.svelte",
+        "components/password-input/password-input.css"
+      ],
+      "dependencies": ["lib/cn", "input"]
+    },
+    "dialog": {
+      "name": "dialog",
+      "description": "Modal overlay built on bits-ui (focus trap, ESC, portal). Requires `npm install bits-ui`.",
+      "files": [
+        "components/dialog/dialog.svelte",
+        "components/dialog/dialog.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "alert-dialog": {
+      "name": "alert-dialog",
+      "description": "Confirmation modal (alertdialog role) for destructive actions. Requires `npm install bits-ui`.",
+      "files": [
+        "components/alert-dialog/alert-dialog.svelte",
+        "components/alert-dialog/alert-dialog.css"
+      ],
+      "dependencies": ["lib/cn", "dialog"]
+    },
+    "popover": {
+      "name": "popover",
+      "description": "Anchored floating panel with bits-ui positioning. Requires `npm install bits-ui`.",
+      "files": [
+        "components/popover/popover.svelte",
+        "components/popover/popover.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "tooltip": {
+      "name": "tooltip",
+      "description": "Hover- / focus-triggered short label built on bits-ui. Requires `npm install bits-ui`.",
+      "files": [
+        "components/tooltip/tooltip.svelte",
+        "components/tooltip/tooltip.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "sheet": {
+      "name": "sheet",
+      "description": "Slide-in panel from a screen edge (right / left / top / bottom). Requires `npm install bits-ui`.",
+      "files": [
+        "components/sheet/sheet.svelte",
+        "components/sheet/sheet.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "drawer": {
+      "name": "drawer",
+      "description": "Bottom-anchored slide-up sheet with a drag handle. Requires `npm install bits-ui`.",
+      "files": [
+        "components/drawer/drawer.svelte",
+        "components/drawer/drawer.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "toast": {
+      "name": "toast",
+      "description": "Sonner-style toast queue. Mount <Toaster /> once and call toast() imperatively.",
+      "files": [
+        "components/toast/toaster.svelte",
+        "components/toast/toaster.css",
+        "components/toast/toast.svelte.ts"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "dropdown-menu": {
+      "name": "dropdown-menu",
+      "description": "Pop-up menu of actions built on bits-ui's DropdownMenu (items-based API). Requires `npm install bits-ui`.",
+      "files": [
+        "components/dropdown-menu/dropdown-menu.svelte",
+        "components/dropdown-menu/dropdown-menu.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "context-menu": {
+      "name": "context-menu",
+      "description": "Right-click pop-up menu built on bits-ui's ContextMenu. Reuses DropdownMenu chrome. Requires `npm install bits-ui`.",
+      "files": [
+        "components/context-menu/context-menu.svelte",
+        "components/context-menu/context-menu.css"
+      ],
+      "dependencies": ["lib/cn", "dropdown-menu"]
+    },
+    "command": {
+      "name": "command",
+      "description": "Searchable ⌘K palette — filterable list with keyboard nav. Pure Svelte, no headless dep.",
+      "files": [
+        "components/command/command.svelte",
+        "components/command/command.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "select": {
+      "name": "select",
+      "description": "Dropdown picker built on bits-ui's Select. Requires `npm install bits-ui`.",
+      "files": [
+        "components/select/select.svelte",
+        "components/select/select.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "native-select": {
+      "name": "native-select",
+      "description": "System <select> with our chrome. No headless dep — useful for SSR forms or mobile-native pickers.",
+      "files": [
+        "components/native-select/native-select.svelte",
+        "components/native-select/native-select.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "combobox": {
+      "name": "combobox",
+      "description": "Typeahead select built on bits-ui's Combobox — filter as you type. Requires `npm install bits-ui`.",
+      "files": [
+        "components/combobox/combobox.svelte",
+        "components/combobox/combobox.css"
+      ],
+      "dependencies": ["lib/cn", "select"]
+    },
+    "breadcrumb": {
+      "name": "breadcrumb",
+      "description": "Hierarchical navigation trail with separator + current-page handling.",
+      "files": [
+        "components/breadcrumb/breadcrumb.svelte",
+        "components/breadcrumb/breadcrumb.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "drag-handle": {
+      "name": "drag-handle",
+      "description": "Grip-dot indicator for resize / reorder targets (vertical or horizontal).",
+      "files": [
+        "components/drag-handle/drag-handle.svelte",
+        "components/drag-handle/drag-handle.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "traffic-lights": {
+      "name": "traffic-lights",
+      "description": "macOS window controls (close / minimise / zoom). Wire to your window manager.",
+      "files": [
+        "components/traffic-lights/traffic-lights.svelte",
+        "components/traffic-lights/traffic-lights.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "progress-ring": {
+      "name": "progress-ring",
+      "description": "Circular determinate progress (sm / md / lg / xl) with optional centered label.",
+      "files": [
+        "components/progress-ring/progress-ring.svelte",
+        "components/progress-ring/progress-ring.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "meter": {
+      "name": "meter",
+      "description": "Discrete level indicator (battery / signal / score) with default + semantic tones.",
+      "files": [
+        "components/meter/meter.svelte",
+        "components/meter/meter.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "sparkline": {
+      "name": "sparkline",
+      "description": "Inline mini line chart from a values array, with optional area fill.",
+      "files": [
+        "components/sparkline/sparkline.svelte",
+        "components/sparkline/sparkline.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "sidebar": {
+      "name": "sidebar",
+      "description": "Collapsible side panel with header / body / footer slots.",
+      "files": [
+        "components/sidebar/sidebar.svelte",
+        "components/sidebar/sidebar.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "toolbar": {
+      "name": "toolbar",
+      "description": "Horizontal action strip with macOS-flavored chrome and density options.",
+      "files": [
+        "components/toolbar/toolbar.svelte",
+        "components/toolbar/toolbar.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "page-header": {
+      "name": "page-header",
+      "description": "Page-level header with title / eyebrow / description and optional sticky.",
+      "files": [
+        "components/page-header/page-header.svelte",
+        "components/page-header/page-header.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "page-body": {
+      "name": "page-body",
+      "description": "Page-level main content region; pairs with PageHeader and PageFooter.",
+      "files": [
+        "components/page-body/page-body.svelte",
+        "components/page-body/page-body.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "page-footer": {
+      "name": "page-footer",
+      "description": "Page-level footer with bordered top and muted small text.",
+      "files": [
+        "components/page-footer/page-footer.svelte",
+        "components/page-footer/page-footer.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "app-shell": {
+      "name": "app-shell",
+      "description": "Full-window header / sidebar / main / footer scaffold (compose-style with slots).",
+      "files": [
+        "components/app-shell/app-shell.svelte",
+        "components/app-shell/app-shell.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "collapsible": {
+      "name": "collapsible",
+      "description": "Toggle-visibility container built on bits-ui's Collapsible. Requires `npm install bits-ui`.",
+      "files": [
+        "components/collapsible/collapsible.svelte",
+        "components/collapsible/collapsible.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "accordion": {
+      "name": "accordion",
+      "description": "Vertical stack of collapsible items (single / multiple). Requires `npm install bits-ui`.",
+      "files": [
+        "components/accordion/accordion.svelte",
+        "components/accordion/accordion.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "inspector": {
+      "name": "inspector",
+      "description": "macOS-flavored right-side property panel with sections of label/value rows.",
+      "files": [
+        "components/inspector/inspector.svelte",
+        "components/inspector/inspector.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "resizable": {
+      "name": "resizable",
+      "description": "Two-pane container with a draggable handle between them (pointer-based, no library dep).",
+      "files": [
+        "components/resizable/resizable.svelte",
+        "components/resizable/resizable.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "split-view": {
+      "name": "split-view",
+      "description": "Multi-pane container with hairline dividers (macOS-flavored). For 2-pane reach for Resizable.",
+      "files": [
+        "components/split-view/split-view.svelte",
+        "components/split-view/split-view.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "title-bar": {
+      "name": "title-bar",
+      "description": "macOS-style window title bar with drag region + leading / trailing slots.",
+      "files": [
+        "components/title-bar/title-bar.svelte",
+        "components/title-bar/title-bar.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "source-list": {
+      "name": "source-list",
+      "description": "macOS Finder-style sidebar list with icons, labels, and counts.",
+      "files": [
+        "components/source-list/source-list.svelte",
+        "components/source-list/source-list.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "outline-view": {
+      "name": "outline-view",
+      "description": "Disclosure tree (TreeView) with chevron toggles and selection state.",
+      "files": [
+        "components/outline-view/outline-view.svelte",
+        "components/outline-view/outline-view.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "table": {
+      "name": "table",
+      "description": "Data-driven HTML table with sticky header, striped rows, and client-side sorting.",
+      "files": [
+        "components/table/table.svelte",
+        "components/table/table.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "list": {
+      "name": "list",
+      "description": "Vertical row list with label / description and optional click handlers.",
+      "files": [
+        "components/list/list.svelte",
+        "components/list/list.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "virtual-list": {
+      "name": "virtual-list",
+      "description": "Windowed list for large datasets (fixed item height, no library dep).",
+      "files": [
+        "components/virtual-list/virtual-list.svelte",
+        "components/virtual-list/virtual-list.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "infinite-scroll": {
+      "name": "infinite-scroll",
+      "description": "IntersectionObserver-based load-more sentinel. Wraps any scrollable list.",
+      "files": [
+        "components/infinite-scroll/infinite-scroll.svelte",
+        "components/infinite-scroll/infinite-scroll.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "timeline": {
+      "name": "timeline",
+      "description": "Vertical chronological event list with markers and tones.",
+      "files": [
+        "components/timeline/timeline.svelte",
+        "components/timeline/timeline.css"
+      ],
+      "dependencies": ["lib/cn"]
+    },
+    "calendar": {
+      "name": "calendar",
+      "description": "Month-grid date picker built on bits-ui. Requires `npm install bits-ui @internationalized/date`.",
+      "files": [
+        "components/calendar/calendar.svelte",
+        "components/calendar/calendar.css"
+      ],
+      "dependencies": ["lib/cn"]
+    }
+  }
+}

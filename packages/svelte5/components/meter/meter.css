@@ -1,0 +1,22 @@
+/* Meter — see ./meter.svelte. */
+
+.uin-meter {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.uin-meter-sm .uin-meter-seg { width: 4px; height: 8px; }
+.uin-meter-md .uin-meter-seg { width: 6px; height: 12px; }
+
+.uin-meter-seg {
+  display: inline-block;
+  border-radius: 1.5px;
+  background: color-mix(in srgb, var(--uin-fg) 14%, transparent);
+  transition: background-color var(--uin-dur-1) var(--uin-ease-standard);
+}
+
+.uin-meter-default .uin-meter-seg-on { background: var(--uin-accent); }
+.uin-meter-success .uin-meter-seg-on { background: var(--uin-success); }
+.uin-meter-warn .uin-meter-seg-on { background: var(--uin-warn); }
+.uin-meter-danger .uin-meter-seg-on { background: var(--uin-danger); }

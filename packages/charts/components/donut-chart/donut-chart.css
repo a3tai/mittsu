@@ -1,0 +1,63 @@
+/* DonutChart - see ./donut-chart.svelte. */
+
+.uin-donut-chart {
+  min-height: 180px;
+}
+
+.uin-donut-segment {
+  stroke: var(--uin-chart-point-stroke, var(--uin-chart-row));
+  stroke-width: 2;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .uin-donut-segment {
+    transition:
+      opacity var(--uin-dur-1, 120ms) var(--uin-ease-standard, ease),
+      filter var(--uin-dur-1, 120ms) var(--uin-ease-standard, ease);
+  }
+}
+
+.uin-donut-segment:hover {
+  filter: brightness(1.06);
+}
+
+.uin-donut-chart:has(.uin-donut-segment:hover) .uin-donut-segment:not(:hover) {
+  opacity: 0.54;
+}
+
+.uin-donut-total {
+  fill: var(--uin-chart-value, var(--uin-chart-text));
+  font-family: var(--uin-font-display, ui-serif, Georgia, serif);
+  font-size: 24px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.uin-donut-label {
+  fill: var(--uin-chart-muted);
+  font-family: var(--uin-font-ui, ui-sans-serif, system-ui, sans-serif);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.uin-donut-slice-label {
+  fill: color-mix(in srgb, var(--uin-chart-text) 88%, transparent);
+  font-family: var(--uin-font-ui, ui-sans-serif, system-ui, sans-serif);
+  font-size: 10px;
+  font-weight: 650;
+  pointer-events: none;
+}
+
+.uin-donut-slice-label-outside {
+  fill: var(--uin-chart-label, var(--uin-chart-muted));
+  font-weight: 600;
+}
+
+.uin-donut-label-line {
+  stroke: var(--uin-chart-crosshair, color-mix(in srgb, var(--uin-chart-axis) 78%, transparent));
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}

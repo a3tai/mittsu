@@ -1,0 +1,56 @@
+{
+  "name": "@a3tai/mittsu-charts",
+  "version": "0.0.1",
+  "description": "Svelte 5 chart components for @a3tai/mittsu, rendered with SVG and powered by D3.",
+  "homepage": "https://mittsu.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a3tai/mittsu.git",
+    "directory": "packages/charts"
+  },
+  "bugs": {
+    "url": "https://github.com/a3tai/mittsu/issues"
+  },
+  "private": false,
+  "type": "module",
+  "files": [
+    "components",
+    "lib",
+    "tokens",
+    "registry.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "d3-array": "^3.2.0",
+    "d3-scale": "^4.0.0",
+    "d3-shape": "^3.2.0",
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/d3-array": "^3.2.0",
+    "@types/d3-scale": "^4.0.0",
+    "@types/d3-shape": "^3.1.0",
+    "d3-array": "^3.2.0",
+    "d3-scale": "^4.0.0",
+    "d3-shape": "^3.2.0",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.0"
+  },
+  "keywords": [
+    "svelte",
+    "svelte5",
+    "charts",
+    "d3",
+    "dataviz",
+    "mittsu"
+  ],
+  "license": "MIT"
+}

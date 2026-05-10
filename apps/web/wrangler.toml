@@ -1,0 +1,15 @@
+#:schema https://json.schemastore.org/wrangler.json
+#
+# Cloudflare Pages config for the Mittsu showcase (apps/web).
+# The site is a SvelteKit app built with @sveltejs/adapter-static, so we
+# point Pages at the static build output and let Cloudflare serve it.
+#
+# Deploy locally:    wrangler pages deploy build --project-name=mittsu
+# Deploy from CI:    .github/workflows/deploy.yml does the same with secrets
+# Custom domain:     bind mittsu.dev to this project in the Cloudflare
+#                    dashboard once the first deploy lands. DNS records
+#                    can be created automatically when you add the domain.
+
+name = "mittsu"
+compatibility_date = "2025-05-10"
+pages_build_output_dir = "./build"

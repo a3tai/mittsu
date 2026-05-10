@@ -1,0 +1,51 @@
+/* Combobox — see ./combobox.svelte. Reuses .uin-select-* classes from Select. */
+
+.uin-combobox {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  background: var(--uin-mat-row);
+  border: 1px solid var(--uin-line);
+  border-radius: var(--uin-r-sm);
+  font-family: var(--uin-font-ui);
+  color: var(--uin-fg);
+  transition: border-color var(--uin-dur-1) var(--uin-ease-standard);
+}
+.uin-combobox:hover { border-color: var(--uin-line-strong); }
+.uin-combobox:focus-within {
+  border-color: var(--uin-accent);
+  box-shadow: var(--uin-focus-ring);
+}
+
+.uin-combobox-input {
+  flex: 1;
+  background: none;
+  border: 0;
+  outline: 0;
+  padding-left: var(--uin-s-3);
+  font-family: inherit;
+  color: var(--uin-fg);
+  min-width: 0;
+}
+.uin-combobox-input::placeholder { color: var(--uin-fg-mute); }
+
+.uin-combobox-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  width: 28px;
+  height: 100%;
+  cursor: pointer;
+  color: var(--uin-fg-mute);
+}
+.uin-combobox-trigger:hover { color: var(--uin-fg); }
+
+.uin-combobox-empty {
+  margin: 0;
+  padding: var(--uin-s-3);
+  text-align: center;
+  color: var(--uin-fg-mute);
+  font-size: 12.5px;
+}

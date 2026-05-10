@@ -1,0 +1,76 @@
+/* Slider — see ./slider.svelte. */
+
+.uin-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  --uin-slider-pct: 0%;
+}
+
+.uin-slider:disabled { cursor: not-allowed; opacity: 0.5; }
+
+.uin-slider:focus { outline: none; }
+
+.uin-slider-md { height: 18px; }
+.uin-slider-sm { height: 14px; }
+
+/* WebKit track + thumb */
+.uin-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--uin-accent) var(--uin-slider-pct),
+    color-mix(in srgb, var(--uin-fg) 14%, transparent) var(--uin-slider-pct)
+  );
+}
+.uin-slider-md::-webkit-slider-runnable-track { margin-top: 7px; }
+.uin-slider-sm::-webkit-slider-runnable-track { height: 3px; margin-top: 5.5px; }
+
+.uin-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -7px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--uin-bg-panel);
+  border: 1px solid var(--uin-line-strong);
+  box-shadow: 0 1px 2px color-mix(in srgb, #000 22%, transparent);
+  cursor: pointer;
+}
+.uin-slider-sm::-webkit-slider-thumb { width: 14px; height: 14px; margin-top: -5.5px; }
+
+.uin-slider:focus-visible::-webkit-slider-thumb { box-shadow: var(--uin-focus-ring); }
+
+/* Firefox track + thumb */
+.uin-slider::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--uin-fg) 14%, transparent);
+}
+.uin-slider-sm::-moz-range-track { height: 3px; }
+
+.uin-slider::-moz-range-progress {
+  height: 4px;
+  border-radius: 999px;
+  background: var(--uin-accent);
+}
+.uin-slider-sm::-moz-range-progress { height: 3px; }
+
+.uin-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--uin-bg-panel);
+  border: 1px solid var(--uin-line-strong);
+  box-shadow: 0 1px 2px color-mix(in srgb, #000 22%, transparent);
+  cursor: pointer;
+}
+.uin-slider-sm::-moz-range-thumb { width: 14px; height: 14px; }
+
+.uin-slider:focus-visible::-moz-range-thumb { box-shadow: var(--uin-focus-ring); }

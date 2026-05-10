@@ -1,0 +1,14 @@
+/* DragHandle — see ./drag-handle.svelte. */
+
+.uin-drag {
+  display: inline-block;
+  background-image: radial-gradient(circle, var(--uin-fg-mute) 1px, transparent 1.5px);
+  background-size: 4px 4px;
+  background-repeat: repeat;
+  opacity: 0.7;
+  transition: opacity var(--uin-dur-1) var(--uin-ease-standard);
+}
+.uin-drag:hover { opacity: 1; }
+
+.uin-drag-vertical { width: 4px; height: 16px; }
+.uin-drag-horizontal { width: 16px; height: 4px; }
