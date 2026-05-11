@@ -25,7 +25,7 @@
 
 .uin-srclist-row {
   display: grid;
-  grid-template-columns: 16px 1fr auto;
+  grid-template-columns: 1fr;
   align-items: center;
   width: 100%;
   gap: var(--uin-s-2);
@@ -39,6 +39,15 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color var(--uin-dur-1) var(--uin-ease-standard);
+}
+.uin-srclist-row-has-count {
+  grid-template-columns: 1fr auto;
+}
+.uin-srclist-row-has-icon {
+  grid-template-columns: 16px 1fr;
+}
+.uin-srclist-row-has-icon.uin-srclist-row-has-count {
+  grid-template-columns: 16px 1fr auto;
 }
 .uin-srclist-row:hover { background: var(--uin-mat-hover); }
 .uin-srclist-row:focus-visible {

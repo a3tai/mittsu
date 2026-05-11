@@ -1,7 +1,7 @@
 <!--
 @component NavItem — sidebar navigation row.
 
-Three slots arranged in a 16px / 1fr / auto grid:
+Three slots arranged as label / aside, with an optional leading dot:
 - `dot` (left) — colored marker; pass a `<Lamp />` or any inline element
 - default (middle) — the label
 - `aside` (right) — count, badge, etc.
@@ -37,11 +37,17 @@ CSS lives in `./nav-item.css`.
 
 <button
   {type}
-  class={cn('uin-nav-item', active && 'uin-nav-item-active', className)}
+  class={cn(
+    'uin-nav-item',
+    dot && 'uin-nav-item-has-dot',
+    aside && 'uin-nav-item-has-aside',
+    active && 'uin-nav-item-active',
+    className
+  )}
   aria-current={active ? 'page' : undefined}
   {...rest}
 >
-  <span class="uin-nav-item-dot">{#if dot}{@render dot()}{/if}</span>
+  {#if dot}<span class="uin-nav-item-dot">{@render dot()}</span>{/if}
   <span class="uin-nav-item-label">{@render children()}</span>
   {#if aside}<span class="uin-nav-item-aside">{@render aside()}</span>{/if}
 </button>

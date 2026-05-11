@@ -22,9 +22,21 @@ coverage
 wrangler-cache
 
 # ── Tooling caches ────────────────────────────────────────
+vite.config.ts.timestamp-*.mjs
 .playwright-mcp
 .vscode/settings.json
 .idea
+
+# ── Example local artifacts ───────────────────────────────
+examples/**/.claude/
+examples/**/.playwright-mcp/
+examples/**/.svelte-kit/
+examples/**/build/
+examples/**/node_modules/
+examples/**/output/
+examples/**/*.tmp.png
+examples/**/*-dark*.png
+examples/**/*-light*.png
 
 # ── OS detritus ──────────────────────────────────────────
 .DS_Store

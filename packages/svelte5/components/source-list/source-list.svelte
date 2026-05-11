@@ -10,7 +10,8 @@ be grouped under section headings.
 - `{type: 'heading', label}` — non-interactive group title
 
 Bind `value` to track selection (single-select). Renders as a list of
-`<NavItem>`-shaped buttons for keyboard accessibility.
+`<NavItem>`-shaped buttons for keyboard accessibility. Rows only reserve
+icon/count columns when those fields are present.
 
 CSS lives in `./source-list.css`.
 -->
@@ -60,14 +61,19 @@ CSS lives in `./source-list.css`.
         <li>
           <button
             type="button"
-            class={cn('uin-srclist-row', value === item.value && 'uin-srclist-row-active')}
+            class={cn(
+              'uin-srclist-row',
+              item.icon && 'uin-srclist-row-has-icon',
+              item.count !== undefined && 'uin-srclist-row-has-count',
+              value === item.value && 'uin-srclist-row-active'
+            )}
             disabled={item.disabled}
             aria-current={value === item.value ? 'page' : undefined}
             onclick={() => pick(item.value)}
           >
-            <span class="uin-srclist-icon" aria-hidden="true">
-              {#if item.icon}{@render item.icon()}{/if}
-            </span>
+            {#if item.icon}
+              <span class="uin-srclist-icon" aria-hidden="true">{@render item.icon()}</span>
+            {/if}
             <span class="uin-srclist-label">{item.label}</span>
             {#if item.count !== undefined}
               <span class="uin-srclist-count">{item.count.toLocaleString()}</span>

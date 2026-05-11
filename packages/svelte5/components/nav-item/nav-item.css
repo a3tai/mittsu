@@ -2,7 +2,7 @@
 
 .uin-nav-item {
   display: grid;
-  grid-template-columns: 16px 1fr auto;
+  grid-template-columns: 1fr;
   align-items: center;
   gap: var(--uin-s-2);
   border: 0;
@@ -17,6 +17,15 @@
   -webkit-app-region: no-drag;
   transition: background-color var(--uin-dur-1) var(--uin-ease-standard);
   width: 100%;
+}
+.uin-nav-item-has-aside {
+  grid-template-columns: 1fr auto;
+}
+.uin-nav-item-has-dot {
+  grid-template-columns: 16px 1fr;
+}
+.uin-nav-item-has-dot.uin-nav-item-has-aside {
+  grid-template-columns: 16px 1fr auto;
 }
 .uin-nav-item:hover {
   background: var(--uin-mat-hover);

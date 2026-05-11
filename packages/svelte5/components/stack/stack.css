@@ -6,6 +6,7 @@
   min-width: 0;
 }
 
+.uin-stack-gap-0 { gap: 0; }
 .uin-stack-gap-1 { gap: var(--uin-s-1); }
 .uin-stack-gap-2 { gap: var(--uin-s-2); }
 .uin-stack-gap-3 { gap: var(--uin-s-3); }

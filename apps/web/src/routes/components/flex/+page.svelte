@@ -5,7 +5,7 @@
 
   const props = [
     {name: 'direction', type: "'row' | 'column' | 'row-reverse' | 'column-reverse'", default: "'row'", description: 'flex-direction value.'},
-    {name: 'gap', type: '1 | 2 | 3 | 4 | 5 | 6 | 7 | 8', default: '2', description: 'Maps to spacing tokens.'},
+    {name: 'gap', type: '0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8', default: '2', description: 'Maps to 0 or spacing tokens.'},
     {name: 'align', type: "'start' | 'center' | 'end' | 'stretch' | 'baseline'", default: "'start'", description: 'align-items value.'},
     {name: 'justify', type: "'start' | 'center' | 'end' | 'between' | 'around'", default: "'start'", description: 'justify-content value.'},
     {name: 'wrap', type: "'nowrap' | 'wrap' | 'wrap-reverse'", default: "'nowrap'", description: 'flex-wrap value.'},

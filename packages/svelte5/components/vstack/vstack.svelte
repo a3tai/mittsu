@@ -17,7 +17,7 @@ CSS lives in `./vstack.css`.
   import type {HTMLAttributes} from 'svelte/elements';
   import {cn} from '../../lib/cn';
 
-  type Gap = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  type Gap = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
   type Align = 'start' | 'center' | 'end' | 'stretch';
   type Justify = 'start' | 'center' | 'end' | 'between';
 
