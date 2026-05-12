@@ -9,6 +9,7 @@
 
 .uin-hstack-wrap { flex-wrap: wrap; }
 
+.uin-hstack-gap-0 { gap: 0; }
 .uin-hstack-gap-1 { gap: var(--uin-s-1); }
 .uin-hstack-gap-2 { gap: var(--uin-s-2); }
 .uin-hstack-gap-3 { gap: var(--uin-s-3); }

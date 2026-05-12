@@ -17,7 +17,7 @@ CSS lives in `./flex.css`.
   import {cn} from '../../lib/cn';
 
   type Direction = 'row' | 'column' | 'row-reverse' | 'column-reverse';
-  type Gap = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  type Gap = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
   type Align = 'start' | 'center' | 'end' | 'stretch' | 'baseline';
   type Justify = 'start' | 'center' | 'end' | 'between' | 'around';
   type Wrap = 'nowrap' | 'wrap' | 'wrap-reverse';

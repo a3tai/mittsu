@@ -1,0 +1,35 @@
+@import '@a3tai/mittsu-svelte5/tokens/tokens.css';
+
+@import '@a3tai/mittsu-svelte5/components/button/button.css';
+@import '@a3tai/mittsu-svelte5/components/input/input.css';
+@import '@a3tai/mittsu-svelte5/components/label/label.css';
+@import '@a3tai/mittsu-svelte5/components/card/card.css';
+@import '@a3tai/mittsu-svelte5/components/separator/separator.css';
+@import '@a3tai/mittsu-svelte5/components/typography/typography.css';
+@import '@a3tai/mittsu-svelte5/components/badge/badge.css';
+@import '@a3tai/mittsu-svelte5/components/container/container.css';
+@import '@a3tai/mittsu-svelte5/components/section/section.css';
+@import '@a3tai/mittsu-svelte5/components/stack/stack.css';
+@import '@a3tai/mittsu-svelte5/components/hstack/hstack.css';
+@import '@a3tai/mittsu-svelte5/components/flex/flex.css';
+@import '@a3tai/mittsu-svelte5/components/aspect-ratio/aspect-ratio.css';
+@import '@a3tai/mittsu-svelte5/components/sheet/sheet.css';
+@import '@a3tai/mittsu-svelte5/components/native-select/native-select.css';
+@import '@a3tai/mittsu-svelte5/components/chip/chip.css';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--uin-bg-base);
+  color: var(--uin-fg);
+  font-family: var(--uin-font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}

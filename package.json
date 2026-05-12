@@ -13,12 +13,19 @@
   },
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "examples/*"
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "check": "npm run check --workspaces --if-present",
-    "test:cli": "node packages/cli/bin/mittsu.js list --registry ./packages/svelte5/registry.json"
+    "test:cli": "node packages/cli/bin/mittsu.js list --registry ./packages/svelte5/registry.json",
+    "example:tasks": "npm --workspace @a3tai/mittsu-example-task-tracker run dev",
+    "example:shop": "npm --workspace @a3tai/mittsu-example-ecommerce run dev",
+    "example:landing": "npm --workspace @a3tai/mittsu-example-saas-landing run dev",
+    "examples:task": "npm run example:tasks",
+    "examples:shop": "npm run example:shop",
+    "examples:landing": "npm run example:landing"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",

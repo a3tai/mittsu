@@ -4,7 +4,7 @@
   import {DocLayout, DocSection, DocExample, DocProps, DocCode} from '$lib/docs';
 
   const props = [
-    {name: 'gap', type: '1 | 2 | 3 | 4 | 5 | 6 | 7 | 8', default: '2', description: 'Maps to spacing tokens --uin-s-1 through --uin-s-8.'},
+    {name: 'gap', type: '0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8', default: '2', description: 'Maps to 0 or spacing tokens --uin-s-1 through --uin-s-8.'},
     {name: 'align', type: "'start' | 'center' | 'end' | 'stretch'", default: "'stretch'", description: 'align-items value for the flex column.'},
     {name: 'justify', type: "'start' | 'center' | 'end' | 'between'", default: "'start'", description: 'justify-content value.'},
     {name: '...rest', type: 'HTMLAttributes<HTMLDivElement>', description: 'Spread onto the underlying <div>.'},

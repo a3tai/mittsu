@@ -14,6 +14,7 @@
 .uin-flex-wrap-wrap         { flex-wrap: wrap; }
 .uin-flex-wrap-wrap-reverse { flex-wrap: wrap-reverse; }
 
+.uin-flex-gap-0 { gap: 0; }
 .uin-flex-gap-1 { gap: var(--uin-s-1); }
 .uin-flex-gap-2 { gap: var(--uin-s-2); }
 .uin-flex-gap-3 { gap: var(--uin-s-3); }

@@ -6,8 +6,8 @@ out in a column, separated by one of the spacing tokens. Use it for
 form fields, sidebar lists, card bodies — anywhere you'd otherwise
 write `display: flex; flex-direction: column; gap: …` by hand.
 
-`gap` (1–8) maps directly to `--uin-s-1` … `--uin-s-8`. Default `2`
-(8px). `align` and `justify` map to `align-items` / `justify-content`
+`gap` (0–8) maps directly to `0` or `--uin-s-1` … `--uin-s-8`.
+Default `2` (8px). `align` and `justify` map to `align-items` / `justify-content`
 with the four most common values each.
 
 For a horizontal version use `HStack`; for arbitrary `flex-direction`
@@ -20,7 +20,7 @@ CSS lives in `./stack.css`.
   import type {HTMLAttributes} from 'svelte/elements';
   import {cn} from '../../lib/cn';
 
-  type Gap = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  type Gap = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
   type Align = 'start' | 'center' | 'end' | 'stretch';
   type Justify = 'start' | 'center' | 'end' | 'between';
 
