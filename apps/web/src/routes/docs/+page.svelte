@@ -60,6 +60,21 @@
   </table>
 </section>
 
+<section class="block">
+  <h2>For LLMs &amp; agent tooling</h2>
+  <p>
+    Mittsu publishes an <a href="/llms.txt"><code>/llms.txt</code></a> index following the
+    <a href="https://llmstxt.org" target="_blank" rel="noreferrer">llms.txt</a> convention,
+    plus a single-fetch <a href="/llms-full.txt"><code>/llms-full.txt</code></a> bundle that
+    concatenates the README, every doc page, and the full component &amp; chart catalog.
+  </p>
+  <p class="muted">
+    Point your assistant at <code>https://mittsu.dev/llms.txt</code> when generating code
+    against the library — the index links to canonical component URLs and the full bundle
+    fits in one prompt.
+  </p>
+</section>
+
 <style>
   .hd { margin: 0 0 var(--uin-s-6); }
   .hd .eyebrow {
